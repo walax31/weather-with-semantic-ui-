@@ -12,7 +12,7 @@ const Container = styled.div`
   flex-direction: column;
   justify-content:center;
   aling-item:center;
-  background-color:rgba(69,177,195,0.86);
+  background-color:#ccf1f5;
 `;
 function App() {
   return (
