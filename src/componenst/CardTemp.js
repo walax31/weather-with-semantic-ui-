@@ -3,8 +3,7 @@ import { Card, Icon } from 'semantic-ui-react'
 import styled from 'styled-components'
 import { IoWaterOutline } from 'react-icons/io5'
 import { WiStrongWind, WiRainWind } from 'react-icons/wi'
-import Moment from 'react-moment';
-import moment from 'moment';
+import dayjs from 'dayjs'
 
 
 const Text = styled.div`
@@ -76,10 +75,11 @@ function CardTemp(props) {
   
   const {data} = props
   const iconURL= 'http://openweathermap.org/img/wn/'+ `${data?.weather[0].icon}`+ '.png'
-  const day = moment().format("dddd");
-  const month =moment().format("MMM D"); 
+  const dayjs = require('dayjs');
+  const month =dayjs().format('MMM D')
+  const now =dayjs().format('dddd') 
   return(
-  <Card color='red'>
+  <Card>
     <Card.Content inverted color='blue' >
       <Text>
         <TextLeft><Icon name='location arrow' size='small' /> {data?.name}</TextLeft>
@@ -113,8 +113,8 @@ function CardTemp(props) {
 
     <Card.Content>
       <Text>
-        <TextLeft><Moment Date={day} format='dddd'/></TextLeft>
-        <TextRight><Moment Date={month} format='MMM D'/></TextRight>
+        <TextLeft>{now}</TextLeft>
+        <TextRight>{month}</TextRight>
       </Text>
     </Card.Content>
   </Card>
