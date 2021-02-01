@@ -3,6 +3,8 @@ import { Icon, Segment } from 'semantic-ui-react'
 import styled from 'styled-components'
 import { WiDayHail,WiDayCloudy,WiDaySunny,WiDayWindy,WiHot,WiFog } from 'react-icons/wi'
 import dayjs from 'dayjs'
+
+
 const Container = styled.div`
   margin-left:2rem;
   width:25vw;
